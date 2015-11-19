@@ -2,13 +2,12 @@ var amigosControllers = angular.module('amigosControllers', []);
 
 //controlador del index
 amigosControllers.controller('appCtrl', function($scope, $location){
-$location.path('/amigos');
 
-
-
-$scope.isActive = function(path){
-return (path == $location.path()) ? 'active' : '';
+$scope.isActive = function (viewLocation) {
+     var active = (viewLocation === $location.path());
+     return active;
 };
+
 });
 //controlador de la lista de amigos
 amigosControllers.controller('amigosCtrl', ['$scope','$rootScope',
@@ -39,4 +38,7 @@ amigosControllers.controller('amigoEditCtrl', ['$scope', '$rootScope','$routePar
   		}
 	}*/
 	$scope.amigo=$rootScope.amigos[$routeParams.amigoId];
+	$scope.guardar=function(){
+		$rootScope.amigos[$routeParams.amigoId]=$scope.amigo;
+	}
   }]);
