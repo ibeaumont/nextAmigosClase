@@ -52,6 +52,6 @@ amigosControllers.controller('amigoNuevoCtrl', ['$scope', '$rootScope','$routePa
 	$scope.guardar=function(){
 		console.log($scope.amigo);
 		$rootScope.amigos.push($scope.amigo);
-		$location.path('#/amigos');
+		
 	}
   }]);
