@@ -2,7 +2,7 @@ var amigosControllers = angular.module('amigosControllers', []);
 
 //controlador del index
 amigosControllers.controller('appCtrl', function($scope, $location){
-$location.path('/amigos');
+//$location.path('/amigos');
 
 
 $scope.isActive = function(path){
