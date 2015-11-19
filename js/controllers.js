@@ -1,7 +1,7 @@
 var amigosControllers = angular.module('amigosControllers', []);
 
 //controlador del index
-amigosControllers.controller('appCtrl', function($scope, $location){
+amigosControllers.controller('appCtrl', function($scope,$rootScope, $location){
   $rootScope.amigos = [
 	{
 		nombre:"juan",
