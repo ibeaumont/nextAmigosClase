@@ -4,7 +4,7 @@ var amigoApp = angular.module('amigoApp', [
 ]);
 
 amigoApp.config(['$routeProvider',
-  function($routeProvider) {
+  function($routeProvider,$location) {
     
         $location.path('/');
     
