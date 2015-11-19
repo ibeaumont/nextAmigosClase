@@ -2,8 +2,11 @@ var amigosControllers = angular.module('amigosControllers', []);
 
 //controlador del index
 amigosControllers.controller('appCtrl', function($scope, $location){
-$scope.startSearch = function(){
-$location.path('/');
+$location.path('/amigos');
+
+
+$scope.isActive = function(path){
+return (path == $location.path()) ? 'active' : '';
 };
 });
 //controlador de la lista de amigos
