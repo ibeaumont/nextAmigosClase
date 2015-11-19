@@ -38,7 +38,7 @@ amigosControllers.controller('amigoEditCtrl', ['$scope', '$rootScope','$routePar
   		}
 	}*/
 	$scope.amigo=$rootScope.amigos[$routeParams.amigoId];
-	$scope.guardar=function(){
-		$rootScope.amigos[$routeParams.amigoId]=$scope.amigo;
-	}
+	//$scope.guardar=function(){
+	//	$rootScope.amigos[$routeParams.amigoId]=$scope.amigo;
+	//}
   }]);
