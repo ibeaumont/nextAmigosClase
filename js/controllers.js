@@ -46,11 +46,12 @@ amigosControllers.controller('amigoEditCtrl', ['$scope', '$rootScope','$routePar
 
 //controlador de la vista Nuevo amigo
 amigosControllers.controller('amigoNuevoCtrl', ['$scope', '$rootScope','$routeParams',
-  function($scope,$rootScope,$routeParams) {
+  function($scope,$rootScope,$routeParams,$location) {
   	
 	$scope.amigo={nombre:"",tlfno:""};
 	$scope.guardar=function(){
 		console.log($scope.amigo);
 		$rootScope.amigos.push($scope.amigo);
+		$location.path('/amigos');
 	}
   }]);
